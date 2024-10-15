@@ -210,10 +210,6 @@ a{
   color: var(--color4);
 }
 
-.language{
-  text-decoration: underline;
-}
-
 /*about me*/
 #about-me{
   display: flex;
