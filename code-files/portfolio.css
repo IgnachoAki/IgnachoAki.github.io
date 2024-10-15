@@ -514,7 +514,7 @@ a{
   nav a{
     display: inline-block;/*spacing arounf <a> will change colors on hover*/
     line-height: 9rem;/*done*/
-    padding: 0 4rem;/*done*/
+    padding: 0 1.83rem;/*done*/
     transition: background-color 0.1s ease-in; 
   }
   
