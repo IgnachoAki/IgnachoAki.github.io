@@ -11,13 +11,31 @@ html{
   font-size: 10px; 
     /*set the root element's font size to this so rem won't be confusing*/
   scroll-behavior: smooth; /*essential for the jump-to-section functionality*/
-  scroll-padding-top: 5.5rem;
+  scroll-padding-top: 0;
     /*same as nav bar size... this prevents the nav bar from covering the section*/
 }
 
 body{
   background-color: var(--color3);
 }
+
+/*Width and spacing*/
+  .full-width{
+    width: 100%;
+  }
+
+  .space-container{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .content-width{
+    padding: 10rem;
+  }
+
+  .space-below{
+    padding-bottom: 1.5rem;
+  }
 
 .center{
   display: flex;
@@ -221,7 +239,7 @@ a{
 #border{
   border: solid 2px var(--color1);/*this part is px*/
   border-radius: 10px;/*this part is px*/
-  padding: 5rem;
+  padding: 3rem;
 }
 
 #row-1{
@@ -256,7 +274,7 @@ a{
   color: var(--color4);
   background-color: var(--color1);
   border-radius: 30px;/*this part is px*/
-  margin: 0 2.5rem;
+  margin: 2.5rem;
   height: 5.5rem;
   width: 18rem;
   transition: background-color 0.1s ease-in;
@@ -303,12 +321,6 @@ a{
   width: 49rem;
 }
 
-/*contact*/
-#contact{
-  display: flex;
-  flex-direction: column;
-}
-
 /*tablet*/
 @media (max-width: 700px){
   *{
@@ -319,16 +331,34 @@ a{
   
   html{
     font-family: "Roboto", sans-serif;;
-    font-size: 6px; 
+    font-size: 6px;/*done*/ 
       /*set the root element's font size to this so rem won't be confusing*/
     scroll-behavior: smooth; /*essential for the jump-to-section functionality*/
-    scroll-padding-top: 10rem;
+    scroll-padding-top: 0;
       /*same as nav bar size... this prevents the nav bar from covering the section*/
   }
   
   body{
     background-color: var(--color3);
   }
+  
+  /*Width and spacing*/
+    .full-width{
+      width: 100%;
+    }
+  
+    .space-container{
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+  
+    .content-width{
+      padding: 10rem;
+    }
+  
+    .space-below{
+      padding-bottom: 1.5rem;
+    }
   
   .center{
     display: flex;
@@ -355,14 +385,9 @@ a{
       color: var(--color5);
    }
 
-   .jp-edit-title-spc{/*specific to JP mobile*/
-    letter-spacing: 0.5rem;/*done*/
-    line-height: 9rem;
+   .jp-tablet-h1{/*new - specific to JP tablet*/
+    font-size: 9rem;
    }
-
-   .jp-edit-title-font{/*specific to JP mobile*/
-    font-size: 7rem;/*new*/
-  }
   
   h2{
     text-align: center;
@@ -390,9 +415,13 @@ a{
   color: var(--color4);
   font-size: 3rem;/*done*/
   }
+
+  .eng-tablet-li{/*only for eng tablet*/
+    font: 2rem;/*done*/
+  }
   
   p{
-    font-size: 3rem;/*done*/
+    font-size: 3rem;/*new*/
     line-height: 5rem;/*done*/
   }
   
@@ -507,14 +536,14 @@ a{
   
   nav ul{
     display: flex;
-    justify-content: space-evenly;/*done*/
+    justify-content: center;/*done*/
     list-style: none;
   }
   
   nav a{
     display: inline-block;/*spacing arounf <a> will change colors on hover*/
     line-height: 9rem;/*done*/
-    padding: 0 1.83rem;/*done*/
+    padding: 0 2rem;
     transition: background-color 0.1s ease-in; 
   }
   
@@ -538,7 +567,7 @@ a{
   #border{
     border: solid 2px var(--color1);/*this part is px*/
     border-radius: 10px;/*this part is px*/
-    padding: 3rem;/*done*/
+    padding: 3rem;
   }
   
   #row-1{
@@ -555,21 +584,21 @@ a{
   #inner-row-1{
     display: flex;
     flex-direction: column;
-    align-items: center;/*done*/
+    align-items: center;/*new*/
   }
-
-#about-me p{
+  
+  #about-me p{
     width: 65rem;/*done*/
   }
   
-  #about-me li{/*done*/
-    line-height: 4.5rem;
+  #about-me li{
+    line-height: 4.5rem;/*done*/
   }
 
   #inner-row-1 ul{/*new*/
     padding-left: 2rem;
   }
-
+  
   #row-2{
     display: flex;
     justify-content: center;
@@ -580,7 +609,7 @@ a{
     color: var(--color4);
     background-color: var(--color1);
     border-radius: 30px;/*this part is px*/
-    margin: 0 2.5rem;
+    margin: 2.5rem;
     height: 5.5rem;
     width: 18rem;
     transition: background-color 0.1s ease-in;
@@ -610,7 +639,7 @@ a{
   .box{
     margin: 2rem;
     height: 70rem;/*done*/
-    width: 63rem;
+    width: 63rem;/*done*/
     background-color: var(--color5);
     padding: 2rem;
     display: flex;
@@ -622,346 +651,9 @@ a{
   .box ul{
     width: 45rem;
   }
-  
+
   .jp-edit-exprnc{/*!! specific to JP page*/
     font-size: 3rem;
     width: 57rem;
   }
-
-  /*contact*/
-  #contact{
-    display: flex;
-    flex-direction: column;
-  }
-}/*iphone 14 pro max*/
-
-/*mobile*/
-@media (max-width: 360px){
-  *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html{
-    font-family: "Roboto", sans-serif;;
-    font-size: 6px; 
-      /*set the root element's font size to this so rem won't be confusing*/
-    scroll-behavior: smooth; /*essential for the jump-to-section functionality*/
-    scroll-padding-top: 10rem;
-      /*same as nav bar size... this prevents the nav bar from covering the section*/
-  }
-  
-  body{
-    background-color: var(--color3);
-  }
-  
-  .center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10rem;/*done*/
-  }
-  
-  /*color*/
-  :root{
-    --color1: rgb(225, 47, 47);
-    --color2: rgb(224, 199, 159);
-    --color3: rgb(41, 40, 40);
-    --color4: rgb(250, 244, 244);
-    --color5: rgb(74, 73, 73);
-    --color6: rgb(255, 128, 128);
-  }
-  
-  /*Text & link*/
-  h1{
-      letter-spacing: 2rem;
-      font-size: 11rem;/*done*/
-      text-align: center;
-      color: var(--color5);
-   }
-
-   .jp-edit-title-spc{/*specific to JP mobile*/
-    letter-spacing: 0.5rem;/*done*/
-    line-height: 9rem;
-   }
-
-   .jp-edit-title-font{/*specific to JP mobile*/
-    font-size: 7rem;/*new*/
-  }
-  
-  h2{
-    text-align: center;
-    font-size: 7rem;/*done*/
-    font-weight: bold;
-    color: var(--color4);;
-  }
-  
-  h3{
-    font-size: 5.5rem;
-    color: var(--color4);
-    font-style: italic;
-    text-decoration: underline;
-    text-decoration-color: var(--color1);
-  }
-  
-  h4{
-    font-size: 3rem;
-    color: var(--color4);
-    text-decoration: underline;
-    text-decoration-color: var(--color1);
-  }
-  
-  li, p{
-  color: var(--color4);
-  font-size: 1rem;/*done*/
-  }
-  
-  p{
-    font-size: 3rem;/*done*/
-    line-height: 5rem;/*done*/
-  }
-  
-  /*images*/
-  .img-frame{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30rem;/*250px*/
-    height: 25rem;/*200px*/
-  }
-  
-  .img-size{
-    max-width: 100%;
-    max-height: 100%;
-  }
-  
-  /*Welcome*/
-  #welcome{
-    display: flex;
-    flex-direction: column;
-    height: 60rem;
-  }
-  
-  .anm-text-1{
-    color: var(--color4);
-    animation: drop1 1.2s ease-in;
-  }
-  
-  .anm-text-2{
-    color: var(--color4);
-    animation: drop2 2.2s ease-in;
-  }
-  
-  .anm-text-3{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: var(--color1);
-    animation: appear 4s ease-in;
-  }
-  
-  @keyframes drop1{
-    0%{
-      opacity: 0;
-      transform: translateY(-250px);
-    }
-  
-    50%{
-      opacity: 0;
-      transform: translatey(-60px);
-    }
-  
-    100%{
-      opacity: 1;
-      transform: translateY(0px);
-    }
-  }
-  
-  @keyframes drop2{
-    0%{
-      opacity: 0;
-      transform: translateY(-250px);
-    }
-  
-    50%{
-      opacity: 0;
-      transform: translatey(-60px);
-    }
-  
-    100%{
-      opacity: 1;
-      transform: translateY(0px);
-    }
-  }
-  
-  @keyframes slide{
-    0%{
-      opacity: 0;
-      transform: translateX(-250px);
-    }
-  
-    50%{
-      opacity: 0;
-      transform: translateX(-60px);
-    }
-  
-    100%{
-      transform: translateX(0px);
-    }
-  }
-  
-  @keyframes appear{
-    0%{
-      opacity: 0;
-    }
-  
-    40%{
-      opacity: 0;
-    }
-  
-    100%{
-      opacity: 1;
-    }
-  }
-  
-  /*nav bar*/
-  nav{
-    background: linear-gradient(to right bottom, rgb(168, 25, 25), rgb(235, 66, 66));
-    position: fixed;
-    top: 0; /*nav bar fill be locked at the top*/
-    width: 100%; /*nav bar will strech to the full length*/
-  }
-  
-  nav ul{
-    display: flex;
-    justify-content: space-evenly;/*done*/
-    list-style: none;
-  }
-  
-  nav a{
-    display: inline-block;/*spacing arounf <a> will change colors on hover*/
-    line-height: 9rem;/*done*/
-    padding: 0 1.83rem;/*done*/
-    transition: background-color 0.1s ease-in; 
-  }
-  
-  nav a:hover{ /*make this so line fades in from the left*/
-    background-color: var(--color3);
-  }
-  
-  a{
-    text-decoration: none;
-    color: var(--color4);
-  }
-  
-  /*about me*/
-  #about-me{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #border{
-    border: solid 2px var(--color1);/*this part is px*/
-    border-radius: 10px;/*this part is px*/
-    padding: 3rem;/*done*/
-  }
-  
-  #row-1{
-    display: flex;
-    flex-direction: column;/*new*/
-    justify-content: center;
-    align-items: center;/*new*/
-  }
-  
-  #about-me img{
-    border-radius: 50%;
-  }
-  
-  #inner-row-1{
-    display: flex;
-    flex-direction: column;
-    align-items: center;/*done*/
-  }
-
-#about-me p{
-    width: 65rem;/*done*/
-  }
-  
-  #about-me li{/*done*/
-    line-height: 4.5rem;
-  }
-
-  #inner-row-1 ul{/*new*/
-    padding-left: 2rem;
-  }
-
-  #row-2{
-    display: flex;
-    justify-content: center;
-  }
-  
-  .btn{
-    font-size: 3rem;/*done*/
-    color: var(--color4);
-    background-color: var(--color1);
-    border-radius: 30px;/*this part is px*/
-    margin: 0 2.5rem;
-    height: 5.5rem;
-    width: 18rem;
-    transition: background-color 0.1s ease-in;
-    transition: border 0.1s ease-in;
-  }
-  
-  .btn:hover{
-    font-weight: bold;
-    background-color: var(--color3);
-    border: solid 2px var(--color1);/*this part is px*/
-  }
-  
-  /*experience*/
-  #experience{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .container{
-    display: flex;
-    flex-direction: column;/*done*/
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .box{
-    margin: 2rem;
-    height: 70rem;/*done*/
-    width: 63rem;
-    background-color: var(--color5);
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    border: solid 3px var(--color1);/*this part is px*/
-    border-radius: 10px;/*this part is px*/
-  }
-  
-  .box ul{
-    width: 45rem;
-  }
-  
-  .jp-edit-exprnc{/*!! specific to JP page*/
-    font-size: 3rem;
-    width: 57rem;
-  }
-
-  /*contact*/
-  #contact{
-    display: flex;
-    flex-direction: column;
-  }
-}/*iphone 14 pro max*/
-
-
-
-
-
+}
